@@ -5,6 +5,13 @@
 "**SnapShare**" - A simplified photo-sharing app for connecting with
 friends.
 
+Figma:
+[<u>Figma</u>](https://www.figma.com/file/buocMxJLoS9ysOa1YP6Z8S/Social-media-app?type=design&node-id=0-1&mode=design&t=cFIYl7QH181NzdU4-0)
+
+ER diagram:
+[<u>ERD</u>](https://app.eraser.io/workspace/TlAjNOImFuPuRHDNWUcj)
+
+
 **<u>Features to be implemented</u>**:
 
 > ● **User** **Registration:** Users can sign up and create their
