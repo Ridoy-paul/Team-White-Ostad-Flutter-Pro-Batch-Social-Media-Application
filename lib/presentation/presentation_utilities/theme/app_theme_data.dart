@@ -34,11 +34,49 @@ class AppThemeData {
         useMaterial3: true,
         brightness: colorScheme.brightness,
         colorScheme: colorScheme,
-        textTheme: textTheme.apply(
-          bodyColor: colorScheme.onSurface,
-          displayColor: colorScheme.onSurface,
-          fontFamily: "Satoshi",
+        textTheme: TextTheme(
+            // displayLarge > displayMedium
+// > displaySmall > headlineMedium
+// > headlineSmall > titleLarge
+// > titleMedium > titleSmall
+// > bodyLarge > bodyMedium
+// > bodySmall > labelLarge >labelSmall
+
+            titleLarge: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
+                fontFamily: "Satoshi",
+                color: colorScheme.onPrimaryContainer),
+
+          titleMedium: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              fontFamily: "Satoshi",
+              color: colorScheme.onPrimaryContainer),
+          titleSmall: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+              fontFamily: "Satoshi",
+              color: colorScheme.onPrimaryContainer),
+          bodyLarge: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+              fontFamily: "Satoshi",
+              color: colorScheme.onPrimaryContainer),
+          bodyMedium: TextStyle(
+              fontSize: 10,
+              fontWeight: FontWeight.w500,
+              fontFamily: "Satoshi",
+              color: colorScheme.onPrimaryContainer),
+          bodySmall: TextStyle(
+              fontSize: 8,
+              fontWeight: FontWeight.w500,
+              fontFamily: "Satoshi",
+              color: colorScheme.onPrimaryContainer),
+
+
         ),
+
 
         scaffoldBackgroundColor: colorScheme.background,
         canvasColor: colorScheme.surface,
@@ -46,21 +84,20 @@ class AppThemeData {
           AppColors.primaryColor.value,
           AppColors.colorSwatch,
         ),
-
         iconTheme: IconThemeData(
-          color: colorScheme.onPrimaryContainer,
-          size: 32,
-          weight: 4
-        ),
-          bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          selectedIconTheme: IconThemeData(color: colorScheme.surfaceTint,
+            color: colorScheme.onPrimaryContainer, size: 32, weight: 4),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          selectedIconTheme: IconThemeData(
+            color: colorScheme.surfaceTint,
             size: 32,
-            weight: 4,),
-          unselectedIconTheme: IconThemeData(color: colorScheme.onPrimaryContainer,
+            weight: 4,
+          ),
+          unselectedIconTheme: IconThemeData(
+            color: colorScheme.onPrimaryContainer,
             size: 32,
-            weight: 4,),
+            weight: 4,
+          ),
         ),
-
         progressIndicatorTheme:
             const ProgressIndicatorThemeData(color: AppColors.primaryColor),
         inputDecorationTheme: InputDecorationTheme(
@@ -87,8 +124,6 @@ class AppThemeData {
             borderRadius: BorderRadius.all(Radius.circular(4)),
           ),
         ),
-
-
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
@@ -100,13 +135,11 @@ class AppThemeData {
             foregroundColor: Colors.white,
           ),
         ),
-
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             foregroundColor: AppColors.primaryColor,
           ),
         ),
-
         appBarTheme: const AppBarTheme(
           titleTextStyle: TextStyle(fontSize: 18, color: Colors.black),
           foregroundColor: Colors.black,

@@ -15,9 +15,9 @@ class _SplashScreenState extends State<SplashScreen> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            const Text(
+            Text(
               "Social Live",
-              style: TextStyle(fontFamily: "Lobster", fontSize: 50),
+              style: Theme.of(context).textTheme.displaySmall,
             ),
             Center(child: Image.asset("assets/images/img.png")),
             ElevatedButton(
@@ -26,8 +26,16 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             TextFormField(),
              Text(
-              "Social Live",
+              "titleLarge",
               style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Theme.of(context).colorScheme.secondary,fontFamily: "Inter"),
+            ),
+            Text(
+              "titleMidium",
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).colorScheme.secondary,fontFamily: "Inter"),
+            ),
+            Text(
+              "Title Small",
+              style: Theme.of(context).textTheme.titleSmall,
             ),
             Text(
               "Social Live",

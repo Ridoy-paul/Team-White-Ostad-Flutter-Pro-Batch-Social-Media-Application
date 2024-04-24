@@ -9,6 +9,8 @@ import 'controller_binder.dart';
 import 'presentation/presentation_utilities/theme/app_theme_data.dart';
 import 'presentation/screens/auth/splash_screen/splash_screen.dart';
 
+
+
 class SocialMediaApp extends StatelessWidget {
   const SocialMediaApp({super.key});
 
