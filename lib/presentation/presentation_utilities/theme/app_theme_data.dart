@@ -2,7 +2,6 @@ import "package:flutter/material.dart";
 
 import "widgets/theme_widgets_exporter.dart";
 
-
 class AppThemeData {
   final TextTheme textTheme;
 
@@ -12,100 +11,107 @@ class AppThemeData {
     return theme(ThemeColorsWithContrast.lightScheme().toColorScheme());
   }
 
-  ThemeData lightMediumContrast() {
-    return theme(ThemeColorsWithContrast.lightMediumContrastScheme().toColorScheme());
-  }
-
-  ThemeData lightHighContrast() {
-    return theme(ThemeColorsWithContrast.lightHighContrastScheme().toColorScheme());
-  }
-
   ThemeData dark() {
     return theme(ThemeColorsWithContrast.darkScheme().toColorScheme());
   }
 
-  ThemeData darkMediumContrast() {
-    return theme(ThemeColorsWithContrast.darkMediumContrastScheme().toColorScheme());
-  }
+  // ThemeData lightMediumContrast() {
+  //   return theme(ThemeColorsWithContrast.lightMediumContrastScheme().toColorScheme());
+  // }
+  // ThemeData lightHighContrast() {
+  //   return theme(ThemeColorsWithContrast.lightHighContrastScheme().toColorScheme());
+  // }
+  // ThemeData darkMediumContrast() {
+  //   return theme(ThemeColorsWithContrast.darkMediumContrastScheme().toColorScheme());
+  // }
+  // ThemeData darkHighContrast() {
+  //   return theme(ThemeColorsWithContrast.darkHighContrastScheme().toColorScheme());
+  // }
 
-  ThemeData darkHighContrast() {
-    return theme(ThemeColorsWithContrast.darkHighContrastScheme().toColorScheme());
-  }
+  List<ExtendedColor> get extendedColors => [];
 
-  List<ExtendedColor> get extendedColors => [
-  ];
   ThemeData theme(ColorScheme colorScheme) => ThemeData(
-    useMaterial3: true,
-    brightness: colorScheme.brightness,
-    colorScheme: colorScheme,
-    textTheme: textTheme.apply(
-      bodyColor: colorScheme.onSurface,
-      displayColor: colorScheme.onSurface,
-    ),
-    scaffoldBackgroundColor: colorScheme.background,
-    canvasColor: colorScheme.surface,
-
-    primarySwatch: MaterialColor(
-      AppColors.primaryColor.value,
-      AppColors.colorSwatch,
-    ),
-
-    progressIndicatorTheme:
-    const ProgressIndicatorThemeData(color: AppColors.primaryColor),
-
-    inputDecorationTheme: InputDecorationTheme(
-      contentPadding: const EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 8,
-      ),
-      hintStyle: TextStyle(
-        color: Colors.grey.shade400,
-      ),
-      border: const OutlineInputBorder(
-        borderSide: BorderSide(color: AppColors.primaryColor),
-      ),
-      enabledBorder: const OutlineInputBorder(
-        borderSide: BorderSide(
-          color: AppColors.primaryColor,
+        useMaterial3: true,
+        brightness: colorScheme.brightness,
+        colorScheme: colorScheme,
+        textTheme: textTheme.apply(
+          bodyColor: colorScheme.onSurface,
+          displayColor: colorScheme.onSurface,
+          fontFamily: "Satoshi",
         ),
-      ),
-      errorBorder: const OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.red,
+
+        scaffoldBackgroundColor: colorScheme.background,
+        canvasColor: colorScheme.surface,
+        primarySwatch: MaterialColor(
+          AppColors.primaryColor.value,
+          AppColors.colorSwatch,
         ),
-      ),
-    ),
 
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+        iconTheme: IconThemeData(
+          color: colorScheme.onPrimaryContainer,
+          size: 32,
+          weight: 4
         ),
-        backgroundColor: AppColors.primaryColor,
-        textStyle: const TextStyle(
-            color: Colors.white, fontSize: 14, letterSpacing: .5),
-        foregroundColor: Colors.white,
-      ),
-    ),
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          selectedIconTheme: IconThemeData(color: colorScheme.surfaceTint,
+            size: 32,
+            weight: 4,),
+          unselectedIconTheme: IconThemeData(color: colorScheme.onPrimaryContainer,
+            size: 32,
+            weight: 4,),
+        ),
 
-    textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(
-        foregroundColor: AppColors.primaryColor,
-      ),
-    ),
+        progressIndicatorTheme:
+            const ProgressIndicatorThemeData(color: AppColors.primaryColor),
+        inputDecorationTheme: InputDecorationTheme(
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 8,
+          ),
+          hintStyle: TextStyle(
+            color: Colors.grey.shade400,
+          ),
+          border: OutlineInputBorder(
+            borderSide: BorderSide(color: colorScheme.onPrimaryContainer),
+            borderRadius: const BorderRadius.all(Radius.circular(4)),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: const BorderRadius.all(Radius.circular(4)),
+            borderSide:
+                BorderSide(color: colorScheme.onPrimaryContainer, width: 2),
+          ),
+          errorBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.red,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(4)),
+          ),
+        ),
 
-    appBarTheme: const AppBarTheme(
-      titleTextStyle: TextStyle(fontSize:18,color: Colors.black),
-      foregroundColor:Colors.black,
-      backgroundColor: Colors.white,
-      elevation: 5,
-    ),
 
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+            backgroundColor: AppColors.primaryColor,
+            textStyle: const TextStyle(
+                color: Colors.white, fontSize: 18, letterSpacing: .5),
+            foregroundColor: Colors.white,
+          ),
+        ),
 
-  );
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: AppColors.primaryColor,
+          ),
+        ),
+
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(fontSize: 18, color: Colors.black),
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
+          elevation: 5,
+        ),
+      );
 }
-
-
-
-
-
