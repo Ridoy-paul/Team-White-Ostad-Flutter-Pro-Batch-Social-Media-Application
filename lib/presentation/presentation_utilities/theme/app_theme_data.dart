@@ -127,7 +127,7 @@ class AppThemeData {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(4),
             ),
             backgroundColor: AppColors.primaryColor,
             textStyle: const TextStyle(
@@ -138,6 +138,7 @@ class AppThemeData {
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             foregroundColor: AppColors.primaryColor,
+            textStyle: const TextStyle(fontWeight: FontWeight.w700,fontFamily: "Satoshi")
           ),
         ),
         appBarTheme: const AppBarTheme(
