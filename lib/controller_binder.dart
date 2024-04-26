@@ -1,9 +1,9 @@
 ///todo: isCodingWorkCompleted?=>"no, work in progress!";
 library;
 
-
 import 'package:get/get.dart';
 
+import 'presentation/screens/home_screen/state_holder/home_screen_controller.dart';
 import 'presentation/screens/screens_exporter.dart';
 
 class ControllerBinder extends Bindings {
@@ -24,7 +24,5 @@ class ControllerBinder extends Bindings {
     Get.put(OthersProfileController());
     Get.put(ProfileController());
     Get.put(SearchingController());
-
   }
 }
-
