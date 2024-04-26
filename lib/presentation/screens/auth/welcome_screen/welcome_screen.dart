@@ -49,14 +49,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     ),
       ),
     ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home,),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.search),label: "search"),
-          BottomNavigationBarItem(icon: Icon(Icons.add),label: "add"),
-          BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),label: "profile"),
-        ],
-      ),
+
     );
   }
 
