@@ -13,48 +13,42 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context){
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Text(
-              "Social Live",
-              style: Theme.of(context).textTheme.displaySmall,
-            ),
-            Center(child: Image.asset("assets/images/img.png")),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text("Add"),
-            ),
-            TextFormField(),
-            Text(
-              "titleLarge",
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Theme.of(context).colorScheme.secondary,fontFamily: "Inter"),
-            ),
-            Text(
-              "titleMidium",
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).colorScheme.secondary,fontFamily: "Inter"),
-            ),
-            Text(
-              "Title Small",
-              style: Theme.of(context).textTheme.titleSmall,
-            ),
-            Text(
-              "Social Live",
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Theme.of(context).colorScheme.secondary,fontFamily: "satoshi",fontWeight: FontWeight.bold),
-            ),
-            Center(
-              child: Image.asset("assets/png_icons/Camera.png"),
-            ),
-            const Icon(
-              Icons.search,
-              size: 24,
-            ),
-            const Icon(
-              Icons.search,
-            ),
-          ],
-        ),
+        padding: const EdgeInsets.all(32.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Social Live",
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Theme.of(context).colorScheme.secondary,fontFamily: "Lobster"),
+              ),
+              const SizedBox(height: 32,),
+              SizedBox(
+                width: double.infinity,
+
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Create Account"),
+                ),
+              ),
+              const SizedBox(height: 12,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Log In",
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(color: Theme.of(context).colorScheme.primary,fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                  const SizedBox(width: 2,),
+                  Icon(Icons.expand_more,color: Theme.of(context).colorScheme.primary,)
+            ],
+          ),]
+                    ),
       ),
+    ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home,),label: "Home"),
