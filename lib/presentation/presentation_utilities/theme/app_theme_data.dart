@@ -115,7 +115,7 @@ class AppThemeData {
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(4)),
             borderSide:
-                BorderSide(color: colorScheme.onPrimaryContainer, width: 2),
+                BorderSide(color: colorScheme.onSurfaceVariant, /*width: 1*/),
           ),
           errorBorder: const OutlineInputBorder(
             borderSide: BorderSide(
@@ -127,7 +127,7 @@ class AppThemeData {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(4),
             ),
             backgroundColor: AppColors.primaryColor,
             textStyle: const TextStyle(
@@ -138,6 +138,7 @@ class AppThemeData {
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             foregroundColor: AppColors.primaryColor,
+            textStyle: const TextStyle(fontWeight: FontWeight.w700,fontFamily: "Satoshi")
           ),
         ),
         appBarTheme: const AppBarTheme(
