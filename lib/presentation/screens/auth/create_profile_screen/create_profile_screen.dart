@@ -39,7 +39,6 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
                 const SizedBox(
                   height: 48,
                 ),
-
                 Text(
                   "Create Your Profile",
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
