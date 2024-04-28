@@ -49,6 +49,8 @@ dependencies:
   item_count_number_button: ^1.9.2
   flutter_screenutil: ^5.9.0
   meta: ^1.10.0
+  flutter_staggered_grid_view: ^0.7.0
+  bottom_navy_bar: ^6.0.0
 
 dev_dependencies:
   flutter_test:
