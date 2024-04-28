@@ -17,7 +17,7 @@ class ControllerBinder extends Bindings {
     Get.put(ContentUploadController());
     Get.put(FollowersController());
     Get.put(FollowingController());
-    Get.put(HomeScreenController());
+    //Get.put(HomeScreenController());
     Get.put(MessagingController());
     Get.put(NewPostController());
     Get.put(NotificationController());
