@@ -7,7 +7,7 @@ class ThemeColorsWithContrast{
     return const MaterialScheme(
       brightness: Brightness.light,
       primary: Color(0xff4478ff),
-      surfaceTint: Color(0xff8FAEFF),
+      surfaceTint: Color(0xff8faeff),
       onPrimary: Color(0xffffffff),
       primaryContainer: Color(0xffDAE4FF),
       onPrimaryContainer: Color(0xff001f24),

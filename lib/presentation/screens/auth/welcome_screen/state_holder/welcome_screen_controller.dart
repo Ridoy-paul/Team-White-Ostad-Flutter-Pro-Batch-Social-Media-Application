@@ -11,7 +11,7 @@ bool  get welcomeScreenInProgress=>_welcomeScreenInProgress;
 Future<void> getWelcomeScreen() async {
   _welcomeScreenInProgress=true;
   update();
-  await Future.delayed(const Duration(seconds: 5),);
+  await Future.delayed(const Duration(seconds: 2),);
   _welcomeScreenInProgress=false;
   update();
 }

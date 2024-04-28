@@ -1,34 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:team_white_social_media_app/presentation/presentation_utilities/form_validator.dart';
+import 'package:team_white_social_media_app/presentation/screens/auth/create_profile_screen/create_profile_screen.dart';
 import 'package:team_white_social_media_app/presentation/screens/auth/otp_verification_screen/otp_verification_screen.dart';
 
 class SendOtpToEmailOrPhoneScreen extends StatefulWidget {
   const SendOtpToEmailOrPhoneScreen({super.key});
 
   @override
-  State<SendOtpToEmailOrPhoneScreen> createState() => _SendOtpToEmailOrPhoneScreenState();
+  State<SendOtpToEmailOrPhoneScreen> createState() =>
+      _SendOtpToEmailOrPhoneScreenState();
 }
 
-class _SendOtpToEmailOrPhoneScreenState extends State<SendOtpToEmailOrPhoneScreen> {
+class _SendOtpToEmailOrPhoneScreenState
+    extends State<SendOtpToEmailOrPhoneScreen> {
   final TextEditingController _emailTEController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  bool _isButtonActive = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Get.back();
-          },
-          icon: const Icon(Icons.arrow_back_ios),),
-      ),
+      appBar: _authAppBar,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Form(
             key: _formKey,
+            onChanged: () {
+              setState(() {
+                _isButtonActive = _formKey.currentState!.validate();
+              });
+            },
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
                   height: 160,
@@ -37,8 +43,10 @@ class _SendOtpToEmailOrPhoneScreenState extends State<SendOtpToEmailOrPhoneScree
                   height: 24,
                 ),
                 Text(
-                  'Welcome back',
-                  style: Theme.of(context).textTheme.titleLarge,
+                  "Welcome Back",
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontFamily: "Inter"),
                 ),
                 const SizedBox(
                   height: 4,
@@ -50,27 +58,47 @@ class _SendOtpToEmailOrPhoneScreenState extends State<SendOtpToEmailOrPhoneScree
                 const SizedBox(
                   height: 16,
                 ),
+                Text(
+                  "Email",
+                  style: Theme.of(context).textTheme.titleSmall,
+                ),
+                const SizedBox(
+                  height: 4,
+                ),
                 TextFormField(
                   controller: _emailTEController,
-                  decoration: const InputDecoration(hintText: 'Email'),
-                  validator: (value) {
-                    if (value?.trim().isEmpty ?? true) {
-                      return 'Enter your email';
-                    }
-                    // TODO: Validate email with Regex
-                    return null;
-                  },
+                  decoration: const InputDecoration(hintText: 'Input Email'),
+                  validator: (value) => FormValidator.emailValidator(value),
                 ),
                 const SizedBox(
                   height: 24,
                 ),
-                ElevatedButton(onPressed: (){
-                  Get.to(()=>const OtpVerificationScreen());
-                }, child: const Text("Get OTP")),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                      onPressed: _isButtonActive
+                          ? () {
+                              Get.to(() => const OtpVerificationScreen());
+                            }
+                          : null,
+                      child: const Text("Get OTP")),
+                ),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  AppBar get _authAppBar {
+    return AppBar(
+      leading: IconButton(
+        onPressed: () {
+          Get.back();
+          Get.offAll(()=>CreateProfileScreen());
+        },
+        icon: const Icon(Icons.arrow_back_ios),
       ),
     );
   }
