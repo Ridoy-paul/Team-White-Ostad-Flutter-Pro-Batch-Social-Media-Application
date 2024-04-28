@@ -49,6 +49,7 @@ dependencies:
   item_count_number_button: ^1.9.2
   flutter_screenutil: ^5.9.0
   meta: ^1.10.0
+  flutter_chat_ui: ^1.6.12
 
 dev_dependencies:
   flutter_test:

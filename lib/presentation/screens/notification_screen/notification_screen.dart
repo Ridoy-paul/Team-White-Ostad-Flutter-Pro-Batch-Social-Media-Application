@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../presentation_utilities/assets_path.dart';
 import 'models/notifications.dart';
 import 'widgets/list_tile_divider.dart';
 import 'widgets/list_tile_view.dart';
@@ -38,17 +39,12 @@ class _NotificationScreenState extends State<NotificationScreen> {
         "Notification",
         style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 20),
       ),
-      elevation: 0,
-      toolbarHeight: 44,
-      centerTitle: false,
-      automaticallyImplyLeading: false,
-      titleSpacing: -5,
     );
   }
 
   List<Notifications> notifications = [
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'Dennis Nedry',
       postBy: 'Isla Nublar',
       postTitle: 'SOC2 compliance report',
@@ -58,7 +54,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       type: 0,
     ),
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'Dennis Nedry',
       postBy: 'Isla Nublar',
       postTitle: 'SOC2 compliance report',
@@ -68,7 +64,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       type: 0,
     ),
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'Dennis Nedry',
       postBy: 'Isla Nublar',
       postTitle: 'SOC2 compliance report',
@@ -78,7 +74,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       type: 1,
     ),
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'Dennis Nedry',
       postBy: 'Isla Nublar',
       postTitle: 'SOC2 compliance report',
@@ -88,7 +84,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       type: 0,
     ),
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'Dennis Nedry',
       postBy: 'Isla Nublar',
       postTitle: 'SOC2 compliance report',
@@ -98,7 +94,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       type: 0,
     ),
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'Dennis Nedry',
       postBy: 'Isla Nublar',
       postTitle: 'SOC2 compliance report',
@@ -108,7 +104,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       type: 1,
     ),
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'null',
       postBy: 'null',
       postTitle: 'null',
@@ -118,7 +114,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       type: 1,
     ),
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'Dennis Nedry',
       postBy: 'Isla Nublar',
       postTitle: 'SOC2 compliance report',
@@ -128,7 +124,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       type: 0,
     ),
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'Dennis Nedry',
       postBy: 'Isla Nublar',
       postTitle: 'SOC2 compliance report',
@@ -138,7 +134,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       type: 0,
     ),
     Notifications(
-      photo: 'assets/images/notification_user_demo.png',
+      photo: AssetsPath.userDemoProfilePic ?? '',
       commentBy: 'Dennis Nedry',
       postBy: 'Isla Nublar',
       postTitle: 'SOC2 compliance report',

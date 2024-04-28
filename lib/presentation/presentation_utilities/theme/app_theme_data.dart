@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:flutter_chat_ui/flutter_chat_ui.dart";
 
 import "widgets/theme_widgets_exporter.dart";
 
@@ -35,18 +36,18 @@ class AppThemeData {
         brightness: colorScheme.brightness,
         colorScheme: colorScheme,
         textTheme: TextTheme(
-            // displayLarge > displayMedium
+          // displayLarge > displayMedium
 // > displaySmall > headlineMedium
 // > headlineSmall > titleLarge
 // > titleMedium > titleSmall
 // > bodyLarge > bodyMedium
 // > bodySmall > labelLarge >labelSmall
 
-            titleLarge: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w700,
-                fontFamily: "Satoshi",
-                color: colorScheme.onPrimaryContainer),
+          titleLarge: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w700,
+              fontFamily: "Satoshi",
+              color: colorScheme.onPrimaryContainer),
 
           titleMedium: TextStyle(
               fontSize: 18,
@@ -73,11 +74,7 @@ class AppThemeData {
               fontWeight: FontWeight.w500,
               fontFamily: "Satoshi",
               color: colorScheme.onPrimaryContainer),
-
-
         ),
-
-
         scaffoldBackgroundColor: colorScheme.background,
         canvasColor: colorScheme.surface,
         primarySwatch: MaterialColor(
@@ -144,7 +141,26 @@ class AppThemeData {
           titleTextStyle: TextStyle(fontSize: 18, color: Colors.black),
           foregroundColor: Colors.black,
           backgroundColor: Colors.white,
-          elevation: 5,
+          elevation: 0,
+          centerTitle: false,
+          titleSpacing: -5,
+          toolbarHeight: 55,
         ),
       );
+
+  static DefaultChatTheme get defaultChatTheme {
+    return const DefaultChatTheme(
+      primaryColor: AppColors.primaryColor,
+      backgroundColor: Colors.transparent,
+      inputBackgroundColor: Colors.white,
+      inputTextColor: Colors.black,
+      inputTextDecoration: InputDecoration(
+        enabledBorder: InputBorder.none,
+        focusedBorder: InputBorder.none,
+      ),
+      inputPadding: EdgeInsets.all(4),
+      inputBorderRadius: BorderRadius.all(Radius.circular(0)),
+      inputMargin: EdgeInsets.only(left: 18, right: 18, bottom: 12),
+    );
+  }
 }

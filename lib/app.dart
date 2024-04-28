@@ -4,6 +4,7 @@ library;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:team_white_social_media_app/presentation/screens/messaging_screen/messaging_screen.dart';
 
 import 'controller_binder.dart';
 import 'presentation/presentation_utilities/theme/app_theme_data.dart';
@@ -23,7 +24,7 @@ class SocialMediaApp extends StatelessWidget {
           return GetMaterialApp(
             theme: const AppThemeData(TextTheme()).light(),
             darkTheme: const AppThemeData(TextTheme()).dark(),
-            home: const NotificationScreen(),
+            home: const MessagingScreen(),
             initialBinding: ControllerBinder(),
           );
         });
