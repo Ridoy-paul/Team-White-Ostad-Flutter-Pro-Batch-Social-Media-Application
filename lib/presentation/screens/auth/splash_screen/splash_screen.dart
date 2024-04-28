@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:team_white_social_media_app/presentation/screens/auth/email_or_phone_login_screen/email_or_phone_login_screen.dart';
 import 'package:team_white_social_media_app/presentation/screens/auth/welcome_screen/welcome_screen.dart';
 
 import '../../../common_widgets/center_circular_progress_indicator.dart';
@@ -29,6 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void moveToNextScreen() async{
     await Future.delayed(const Duration(seconds: 1),);
     Get.offAll(()=>const WelcomeScreen());
+    // Get.offAll(()=>const EmailOrPhoneLoginScreen());
   }
 
 
