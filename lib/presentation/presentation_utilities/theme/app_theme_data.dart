@@ -115,7 +115,7 @@ class AppThemeData {
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(4)),
             borderSide:
-                BorderSide(color: colorScheme.onPrimaryContainer, width: 2),
+                BorderSide(color: colorScheme.onSurfaceVariant, /*width: 1*/),
           ),
           errorBorder: const OutlineInputBorder(
             borderSide: BorderSide(
