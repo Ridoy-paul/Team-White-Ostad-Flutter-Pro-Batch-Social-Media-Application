@@ -76,7 +76,7 @@ class MainBottomNavBar extends StatelessWidget {
           case 0:
             return const HomeScreen();
           case 1:
-            return SearchingScreen(key: GlobalKey());
+            return SearchingScreen();
           case 2:
             return  NewPostScreen();
           case 3:

@@ -5,6 +5,8 @@ library;
 import 'package:get/get.dart';
 
 import 'presentation/screens/screens_exporter.dart';
+import 'presentation/screens/searching_screen/searching_screen.dart';
+import 'presentation/screens/searching_screen/widgets/search_text_field.dart';
 
 class ControllerBinder extends Bindings {
   @override
@@ -23,7 +25,8 @@ class ControllerBinder extends Bindings {
     Get.put(NotificationController());
     Get.put(OthersProfileController());
     Get.put(ProfileController());
-    Get.put(SearchingController());
+
+    Get.put(SearchController());
 
   }
 }

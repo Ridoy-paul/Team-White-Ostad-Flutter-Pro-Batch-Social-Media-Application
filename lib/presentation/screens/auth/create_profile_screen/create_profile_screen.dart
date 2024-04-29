@@ -122,7 +122,8 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-                        Get.to(()=>SendOtpToEmailOrPhoneScreen);
+
+                        Get.to(SendOtpToEmailOrPhoneScreen());
                       },
                       child: const Text("Next"),
                     )),

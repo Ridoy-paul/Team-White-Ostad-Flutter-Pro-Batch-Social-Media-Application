@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:team_white_social_media_app/presentation/screens/main_bottom_nav_screen/main_bottom_nav_controller.dart';
+import 'package:team_white_social_media_app/presentation/screens/main_bottom_nav_bar/main_bottom_nav_bar.dart';
+
 
 class OtpVerificationScreen extends StatefulWidget {
   const OtpVerificationScreen({super.key});
@@ -85,9 +87,12 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 const SizedBox(
                   height: 24,
                 ),
-                ElevatedButton(onPressed: () {
-                  Get.offAll(()=>const MainBottomNavScreen());
-                }, child: const Text("Verify")),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(onPressed: () {
+                    Get.offAll(()=> MainBottomNavBar());
+                  }, child: const Text("Verify")),
+                ),
                 const SizedBox(
                   height: 24,
                 ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:team_white_social_media_app/presentation/screens/auth/otp_verification_screen/otp_verification_screen.dart';
@@ -64,9 +65,12 @@ class _SendOtpToEmailOrPhoneScreenState extends State<SendOtpToEmailOrPhoneScree
                 const SizedBox(
                   height: 24,
                 ),
-                ElevatedButton(onPressed: (){
-                  Get.to(()=>const OtpVerificationScreen());
-                }, child: const Text("Get OTP")),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(onPressed: (){
+                    Get.to(()=>const OtpVerificationScreen());
+                  }, child: const Text("Get OTP")),
+                ),
               ],
             ),
           ),
