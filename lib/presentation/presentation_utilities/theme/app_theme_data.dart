@@ -126,8 +126,10 @@ class AppThemeData {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
+            disabledBackgroundColor:const Color(0xffdae4ff),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(4),
+
             ),
             backgroundColor: AppColors.primaryColor,
             textStyle: const TextStyle(
