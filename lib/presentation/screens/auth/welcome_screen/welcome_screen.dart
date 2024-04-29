@@ -63,17 +63,25 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 
-  TextButton _loginButton(BuildContext context) {
-    return TextButton(
-      onPressed: () {
-        Get.to(() => const EmailOrPhoneLoginScreen());
-      },
-      child: Text(
-        "Log In",
-        style: Theme.of(context).textTheme.titleSmall?.copyWith(
-            color: Theme.of(context).colorScheme.primary,
-            fontWeight: FontWeight.w700),
-      ),
+  GetBuilder<WelcomeScreenController> _loginButton(BuildContext context) {
+    return GetBuilder<WelcomeScreenController>(
+      builder: (controller) {
+        return Visibility(
+          visible: controller.welcomeScreenInProgress==false,
+          replacement: const CenterCircularProgressIndicator(),
+          child: TextButton(
+            onPressed: () {
+              Get.to(() => const EmailOrPhoneLoginScreen());
+            },
+            child: Text(
+              "Log In",
+              style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.w700),
+            ),
+          ),
+        );
+      }
     );
   }
 }

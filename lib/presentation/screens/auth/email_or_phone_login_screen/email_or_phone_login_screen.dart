@@ -17,7 +17,7 @@ class _EmailOrPhoneLoginScreenState extends State<EmailOrPhoneLoginScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool passwordVisible = false;
   bool isChecked = false;
-  bool _isButtonActive = true;
+  bool _isButtonActive = false;
 
 
   @override
@@ -109,9 +109,6 @@ class _EmailOrPhoneLoginScreenState extends State<EmailOrPhoneLoginScreen> {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          disabledBackgroundColor:const Color(0xffdae4ff),
-        ),
         onPressed: _isButtonActive
             ? () {
                 Get.to(() => const MainBottomNavScreen());
